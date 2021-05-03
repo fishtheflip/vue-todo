@@ -3,6 +3,9 @@
     <Header/>
   </div>
   <router-view/>
+  <div>
+    
+  </div>
   <Footer/>
 </template>
 
@@ -18,6 +21,12 @@ export default {
   components: {
     Header,
     Footer
+  },
+
+  computed:{
+    getUnfinishedPost(){
+      return this.$store.getters.getUnfinishedPost
+    }
   }
 }
 </script>
