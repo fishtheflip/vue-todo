@@ -3,8 +3,6 @@
                     <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title">Task: {{index + 1}}</h5>
-                        
-                        
                     </div>
                     <div class="modal-body">
                         <p class="task-text">{{items.text}}</p>
@@ -12,8 +10,8 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" v-if="showDoneBtn" @click="doneTask(index)" >Done</button>
-                        <router-link :to="{name: 'DynTask', params:{id: index, type : showDoneBtn }}" class="btn btn-secondary">Edit</router-link>
-                        <button type="button" class="btn btn-warning" @click="deleteTask(index)">Delete</button>
+                        <router-link :to="{name: 'DynTask', params:{id: index, type : showDoneBtn }}"  v-if="showDoneBtn" class="btn btn-secondary"  >Edit</router-link>
+                        <button type="button" class="btn btn-warning"  @click="deleteTask(index)">Delete</button>
                     </div>
                     </div>
                     <hr/>

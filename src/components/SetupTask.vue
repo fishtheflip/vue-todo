@@ -32,11 +32,11 @@ export default {
         
         onSubmit(e) {
             
-            let newItem = {
+        let newItem = {
                 id: 222,
                 text: this.exampleTask,
                 date: this.exampleDate
-            }
+        }
           this.$store.commit('addNewTask', newItem)
           e.preventDefault()
         }
